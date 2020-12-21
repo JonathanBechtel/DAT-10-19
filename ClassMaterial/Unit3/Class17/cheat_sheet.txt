@@ -1,0 +1,48 @@
+Class 17 Cheat Sheet
+
+**CREATING A VIRTUAL ENVIRONMENT**
+
+TO CREATE: 
+
+conda create --name myenv
+
+(myenv is the name of your virtual environment, and you can use whatever name you'd like)
+
+TO INITIALIZE:
+
+conda activate myenv
+
+TO SHUT DOWN:
+
+conda deactivate
+
+TO INSTALL PACKAGES FROM A REQUIREMENTS.TXT
+
+pip install -r requirements.txt
+
+FOR RUNNING HEROKU
+
+STEP 1:
+HEROKU CREATE 
+
+ -- this initializes an instance of your app
+
+STEP 2:
+
+heroku git:remote -a name-of-your-heroku-app-485858
+
+ -- this creates a remote repository that heroku reads from to deploy your app
+
+STEP 3:
+
+git push heroku master
+
+ -- this is like an ordinary git push, except to your heroku remote.  this is how you deploy changes to your code
+
+HEROKU CAVEATS:
+
+ - You must have a requirements.txt file with all of your dependencies in your repo
+ - You must have a PROCFILE in your repo.  This file essentially tells Heroku how to start your app.
+ - PROCFILE requirements change from app to app depending on what kind of build you have.  If you are using streamlit you need to have a setup.sh
+file with the appropriate text that was given in class
+ - Malformed procfiles are common reasons deployments do not go as planned so please pay close attention to this step
