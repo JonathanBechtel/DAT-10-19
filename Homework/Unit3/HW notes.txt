@@ -1,0 +1,40 @@
+# DONE
+# rush hour
+# hour of day
+# month
+# day of month
+
+# TRIED, DIDN'T HELP
+# yes/no flag if it's storming
+
+# TO DO
+# average count for weather type
+# average count for hour of day
+# average count for some combination of columns
+# rolling average of the last few hours?
+# convert season to number
+# convert weather to number
+# count of rides from previous hour
+# count of rides from same time on previous day
+# count of rides from same time previous day with same weather?
+
+
+
+
+
+dtypes = {
+    'holiday': np.int8,
+    'workingday': np.int8,
+    'temp': np.float32,
+    'atemp': np.float32,
+    'humidity': np.int8,
+    'windspeed': np.float32,
+    'count': np.int16
+}
+
+
+
+
+df.sort_values(by=['datetime'], ascending=True, inplace=True)
+df.reset_index(drop=True, inplace=True)
+
